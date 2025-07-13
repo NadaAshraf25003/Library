@@ -188,7 +188,7 @@ button.check_status.not-read {
 
 .newBook {
   position: fixed;
-  top: -200%;
+  top: -150%;
   left: 0;
   z-index: 100;
   min-height: 100vh;
