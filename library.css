@@ -329,4 +329,8 @@ footer a:hover {
   .newBook .book_Form {
     width: 90%;
   }
+  .newBook {
+    position: fixed;
+    top: -200%
+  }
 }
