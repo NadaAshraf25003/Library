@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="icon" href="../imges/library.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="library.css" />
+  </head>
+  <body>
+    <!-- Header Start  -->
+    <header>
+      <nav>
+        <ul>
+          <li><h2>Library</h2></li>
+          <li><button>Log in</button></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Header end  -->
+
+    <!-- Main Start  -->
+    <main>
+      <h2 class="addBook"><i class="fas fa-plus-circle"></i> Add New Book</h2>
+      <div class="books">
+        <div class="overlay"></div>
+      </div>
+    </main>
+    <!-- Main end  -->
+
+    <!-- New Book Start  -->
+    <div class="newBook">
+      <form action="" class="book_Form">
+        <h1>Add New Book</h1>
+        <input required type="text" id="title" placeholder="Enter book title" />
+        <input
+          required
+          type="text"
+          id="author"
+          placeholder="Enter book author"
+        />
+        <input
+          required
+          type="number"
+          id="numberOfPages"
+          placeholder="Enter number of pages"
+          min="0"
+        />
+
+        <select id="genre" required>
+          <option value="">Select a genre</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Non-Fiction">Non-Fiction</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Mystery">Mystery</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Biography">Biography</option>
+          <option value="History">History</option>
+          <option value="Self-Help">Self-Help</option>
+          <option value="Romance">Romance</option>
+        </select>
+        <input required type="file" id="img" placeholder="Enter book image" />
+        <div class="checkbox-group">
+          <label for="read">Have You Read it ?</label>
+          <input type="checkbox" id="read" />
+        </div>
+        <button type="submit" id="Submit">Add Book</button>;
+      </form>
+    </div>
+    <!-- New Book End  -->
+
+    <!-- Footer Start  -->
+    <footer>
+      <p>Copyright © 2025 Nada Ashraf</p>
+      <a href="#"><i class="fa-brands fa-github"></i></a>
+    </footer>
+    <!-- Footer End  -->
+
+    <script src="library.js"></script>
+  </body>
+</html>
