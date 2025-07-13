@@ -157,14 +157,13 @@ main {
   font-weight: bold;
 }
 button.check_status.read {
- background: rgba(178, 186, 224, 0.938);
+  background: rgba(178, 186, 224, 0.938);
   color: var(--primary);
 }
 button.check_status.not-read {
   background-color: var(--warning);
   color: white;
 }
-
 
 .remove {
   background: rgba(247, 37, 133, 0.1);
@@ -185,10 +184,11 @@ button.check_status.not-read {
 /* BOOKS end  */
 
 /* main end  */
+/* New Book start  */
 
 .newBook {
   position: fixed;
-  top: -100%;
+  top: -120%;
   left: 0;
   z-index: 100;
   min-height: 100vh;
@@ -284,6 +284,7 @@ select:focus {
   top: 0;
 }
 
+/* New Book end  */
 /* footer start  */
 footer {
   position: fixed;
@@ -311,8 +312,8 @@ footer a:hover {
 
 @media (max-width: 990px) {
   .newBook .book_Form {
-  width: 40%;
-}
+    width: 40%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -321,11 +322,11 @@ footer a:hover {
     box-shadow: 0 0 6px 0px rgba(72, 70, 70, 0.5);
   }
   .newBook .book_Form {
-  width: 50%;
-}
+    width: 50%;
+  }
 }
 @media (max-width: 420px) {
   .newBook .book_Form {
-  width: 90%;
-}
+    width: 90%;
+  }
 }
