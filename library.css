@@ -269,7 +269,7 @@ button.check_status.not-read {
 .newBook .book_Form input,
 select {
   width: 100%;
-  padding: 0.3rem;
+  padding: 0.7rem;
   margin: 0.5rem 0;
   border-radius: 5px;
   border: none;
