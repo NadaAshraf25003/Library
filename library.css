@@ -203,7 +203,7 @@ button.check_status.not-read {
 /* main end  */
 /* New Book start  */
 
-.newBook {
+/* .newBook {
   position: fixed;
   top: -120%;
   left: 0;
@@ -228,7 +228,36 @@ button.check_status.not-read {
   padding: 1rem 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.08);
+} */
+
+
+.newBook {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
+.newBook .book_Form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
 .book_Form h1 {
   align-self: center;
   margin-bottom: 1.5rem;
@@ -319,8 +348,18 @@ select:focus {
   opacity: 0.7;
 }
 
-.newBook.active {
+/* .newBook.active {
   top: 0;
+} */
+
+.newBook.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.newBook.active .book_Form {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* New Book end  */
