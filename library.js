@@ -49,7 +49,6 @@ book_Form.addEventListener("submit", function (e) {
 
 function Load_Books(books) {
   books_Container.innerHTML += `
-
   <div class="card">
             <div class="book_img">
               <img src="${books.Img}" alt="" />
@@ -107,3 +106,7 @@ function Toggle_Read_Status(button) {
   button.innerHTML = `<i class="fa-solid fa-repeat"></i>&nbsp;&nbsp;${nextLabel}`;
   statusSpan.textContent = nextspan;
 }
+
+
+
+
