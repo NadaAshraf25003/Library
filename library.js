@@ -92,6 +92,7 @@ function Load_Books(books) {
 
 function Remove_Book(element) {
   element.closest(".card").remove();
+   numberOfBooks.textContent = --count;
 }
 
 function Toggle_Read_Status(button) {
