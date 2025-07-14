@@ -38,7 +38,7 @@ header ul h2 {
 header ul button {
   background-color: var(--Ligntgray);
   font-size: 1.1rem;
-   padding: 0.8rem 1.2rem;
+  padding: 0.8rem 1.2rem;
   border: none;
   border-radius: 12px;
   cursor: pointer;
@@ -60,6 +60,11 @@ main {
   width: 100%;
   margin-bottom: 6rem;
 }
+main .head1 {
+  display: flex;
+  align-items: center;
+  gap: 20rem;
+}
 .addBook {
   color: var(--primary);
   font-size: 2rem;
@@ -75,6 +80,16 @@ main {
   border-radius: 10px;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px var(--gray);
+}
+.book-count {
+  color: var(--secondary);
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+.book-count span {
+  color: var(--warning);
 }
 
 /* BOOKS start  */
@@ -219,7 +234,7 @@ button.check_status.not-read {
   margin-bottom: 1.5rem;
   font-size: 1.6rem;
   color: var(--secondary);
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .newBook .book_Form input,
@@ -230,13 +245,13 @@ select {
   border-radius: 5px;
   border: none;
   font-size: 1rem;
-    transition: border-color .25s ease, box-shadow .25s ease;
-background: #f7f9fc;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  background: #f7f9fc;
 }
 .newBook .book_Form input:focus,
 select:focus {
-   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(0, 119, 255, .25);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.25);
   outline: none;
 }
 
@@ -262,10 +277,10 @@ select:focus {
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
-  accent-color: var(--warning);    
+  accent-color: var(--warning);
 }
-.checkbox-group input[type="checkbox"]:focus{
-  box-shadow: none;        
+.checkbox-group input[type="checkbox"]:focus {
+  box-shadow: none;
 }
 .newBook .book_Form button {
   padding: 0.5rem 1.6rem;
@@ -278,16 +293,15 @@ select:focus {
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: bold;
-    transition: transform .25s ease, box-shadow .25s ease, opacity .25s ease;
-
-  
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
 }
 .newBook .book_Form button:hover {
-box-shadow: 0 4px 16px rgba(0, 119, 255, .35);
-  transform: translateY(-2px);}
+  box-shadow: 0 4px 16px rgba(0, 119, 255, 0.35);
+  transform: translateY(-2px);
+}
 .book_Form button[type="submit"]:active {
   transform: translateY(0);
-  opacity: .85;
+  opacity: 0.85;
 }
 .newBook .book_Form input[type="file"] {
   padding: 0.3rem;
@@ -349,8 +363,20 @@ footer a:hover {
   .newBook .book_Form {
     width: 50%;
   }
+  main .head1 {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  *:not(i, span) {
+    font-size: small;
+  }
 }
 @media (max-width: 420px) {
+  *:not(i, span) {
+    font-size: small;
+  }
   .newBook .book_Form {
     width: 90%;
   }
@@ -360,8 +386,8 @@ footer a:hover {
   .book_Form h1 {
     font-size: 1.4rem;
   }
+  main .head1 {
+    flex-direction: column;
+    gap: 0;
+  }
 }
-
-
-
-
