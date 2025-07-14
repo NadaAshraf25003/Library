@@ -38,10 +38,12 @@ header ul h2 {
 header ul button {
   background-color: var(--Ligntgray);
   font-size: 1.1rem;
-  padding: 1rem;
+   padding: 0.8rem 1.2rem;
   border: none;
-  border-radius: 15px;
-  transition: all 0.5s ease-in-out;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 header ul button:hover {
   background-color: var(--gray);
@@ -188,7 +190,7 @@ button.check_status.not-read {
 
 .newBook {
   position: fixed;
-  top: -150%;
+  top: -120%;
   left: 0;
   z-index: 100;
   min-height: 100vh;
@@ -207,11 +209,19 @@ button.check_status.not-read {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background-color: var(--Ligntgray);
+  background-color: #ffffff;
   padding: 1rem 2rem;
   border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.08);
 }
+.book_Form h1 {
+  align-self: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--secondary);
+  letter-spacing: .5px;
+}
+
 .newBook .book_Form input,
 select {
   width: 100%;
@@ -220,11 +230,14 @@ select {
   border-radius: 5px;
   border: none;
   font-size: 1rem;
+    transition: border-color .25s ease, box-shadow .25s ease;
+background: #f7f9fc;
 }
 .newBook .book_Form input:focus,
 select:focus {
+   border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 119, 255, .25);
   outline: none;
-  border: 2px solid var(--success);
 }
 
 .newBook .book_Form label {
@@ -232,6 +245,7 @@ select:focus {
   text-align: left;
   font-weight: bold;
   margin: 0.5rem 0;
+  cursor: pointer;
 }
 .checkbox-group {
   display: flex;
@@ -247,6 +261,11 @@ select:focus {
   background: #e2e8f0;
   cursor: pointer;
   transition: all 0.3s ease;
+  border: none;
+  accent-color: var(--warning);    
+}
+.checkbox-group input[type="checkbox"]:focus{
+  box-shadow: none;        
 }
 .newBook .book_Form button {
   padding: 0.5rem 1.6rem;
@@ -259,11 +278,17 @@ select:focus {
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: bold;
+    transition: transform .25s ease, box-shadow .25s ease, opacity .25s ease;
+
+  
 }
 .newBook .book_Form button:hover {
-  opacity: 0.7;
+box-shadow: 0 4px 16px rgba(0, 119, 255, .35);
+  transform: translateY(-2px);}
+.book_Form button[type="submit"]:active {
+  transform: translateY(0);
+  opacity: .85;
 }
-
 .newBook .book_Form input[type="file"] {
   padding: 0.3rem;
   width: 100%;
@@ -329,8 +354,14 @@ footer a:hover {
   .newBook .book_Form {
     width: 90%;
   }
-  .newBook {
-    position: fixed;
-    top: -200%
+  .book_Form {
+    padding: 2rem 1.25rem;
+  }
+  .book_Form h1 {
+    font-size: 1.4rem;
   }
 }
+
+
+
+
