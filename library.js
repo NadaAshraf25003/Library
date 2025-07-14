@@ -3,7 +3,7 @@ var new_book = document.querySelector(".newBook");
 var book_Form = document.querySelector(".book_Form");
 var books_Container = document.querySelector(".overlay");
 var Submit_Book = document.querySelector("#Submit");
-var dd = document.querySelector("#d");
+var numberOfBooks = document.querySelector(".book-count span");
 
 //   to display the form
 add_book.addEventListener("click", function () {
@@ -46,8 +46,9 @@ book_Form.addEventListener("submit", function (e) {
 
   reader.readAsDataURL(file); // This reads the image as a base64-encoded string
 });
-
+var count=0;
 function Load_Books(books) {
+  numberOfBooks.textContent= ++count;
   books_Container.innerHTML += `
   <div class="card">
             <div class="book_img">
@@ -85,6 +86,10 @@ function Load_Books(books) {
       </div>
   </div>`;
 }
+// function numBerOfBOOKS(book){
+//   numberOfBooks.innerHTML = book;
+// }
+
 function Remove_Book(element) {
   element.closest(".card").remove();
 }
